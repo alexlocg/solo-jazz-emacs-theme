@@ -121,17 +121,18 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(fringe                                  ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-white))))
    `(popup-tip-face                          ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-lavender))))
    `(header-line                             ((t (:foreground ,solo-jazz-purple))))
-   `(highlight                               ((t (:background ,solo-jazz-lavender))))
+   `(highlight                               ((t (:background ,solo-jazz-lavender :underline t))))
    `(success                                 ((t (:foreground ,solo-jazz-green :weight bold))))
    `(warning                                 ((t (:foreground ,solo-jazz-orange :weight bold))))
    `(error                                   ((t (:foreground ,solo-jazz-red :weight bold))))
    `(tooltip                                 ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-white))))
    `(menu                                    ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-white))))
    `(minibuffer-prompt                       ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-white))))
-   `(mode-line                               ((,class (:background ,solo-jazz-white-2 ))))
+   `(mode-line                               ((,class (:background ,solo-jazz-white-2 :box (:line-width 1  :color ,solo-jazz-purple :style nil ;; released-button
+                                                                                                          ) ))))
    `(mode-line-buffer-id                     ((t (:foreground ,solo-jazz-teal))))
    `(mode-line-inactive                      ((t (:foreground ,solo-jazz-slate :background ,solo-jazz-white :box (:line-width -1 :color ,solo-jazz-grey)))))
-   `(region                                  ((,class (:background ,solo-jazz-lavender))))
+   `(region                                  ((,class (:background ,solo-jazz-blue :foreground ,solo-jazz-white)))) ;;select region
    `(secondary-selection                     ((t (:background ,solo-jazz-honeydew))))
    `(trailing-whitespace                     ((t (:background ,solo-jazz-red))))
    `(vertical-border                         ((t (:foreground ,solo-jazz-grey))))
@@ -223,7 +224,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(ido-indicator                           ((t (:foreground ,solo-jazz-teal :background ,solo-jazz-purple))))
 
    ;; isearch
-   `(isearch                                 ((t (:foreground ,solo-jazz-purple :weight bold :background ,solo-jazz-rose))))
+   `(isearch                                 ((t (:foreground ,solo-jazz-rose :weight bold :background ,solo-jazz-purple))))
    `(isearch-fail                            ((t (:foreground ,solo-jazz-red :background ,solo-jazz-white))))
    `(lazy-highlight                          ((t (:foreground ,solo-jazz-purple :weight bold :background ,solo-jazz-honeydew))))
 
@@ -445,7 +446,8 @@ Also bind `class' to ((class color) (min-colors 89))."
 
    ;; show-paren
    `(show-paren-mismatch                     ((t (:foreground ,solo-jazz-red :background ,solo-jazz-white :weight bold))))
-   `(show-paren-match                        ((t (:foreground ,solo-jazz-teal+1 :background ,solo-jazz-honeydew :weight bold))))
+   `(show-paren-match                        ((t (:foreground ,solo-jazz-teal+1 ;; :background ,solo-jazz-honeydew
+                                                              :weight bold :underline t))))
    `(show-paren-match-expression             ((t (:background ,solo-jazz-honeydew))))
 
    ;; undo-tree
