@@ -120,7 +120,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(file-name-shadow                        ((t (:foreground ,solo-jazz-slate))))
    `(fringe                                  ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-white))))
    `(popup-tip-face                          ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-lavender))))
-   `(header-line                             ((t (:foreground ,solo-jazz-purple))))
+   `(header-line                             ((t (:background ,solo-jazz-white-1 :box (:line-width -1 :color ,solo-jazz-grey)))))
    `(highlight                               ((t (:background ,solo-jazz-lavender :underline t))))
    `(success                                 ((t (:foreground ,solo-jazz-green :weight bold))))
    `(warning                                 ((t (:foreground ,solo-jazz-orange :weight bold))))
@@ -248,7 +248,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(linum                                   ((t (:foreground ,solo-jazz-slate :background ,solo-jazz-white))))
 
    ;; line-number
-   `(line-number                             ((,class (:inherit fixed-pitch :foreground ,solo-jazz-slate :background ,solo-jazz-white))))
+   ;; `(line-number                             ((,class (:inherit fixed-pitch :foreground ,solo-jazz-slate :background ,solo-jazz-white))))
    `(line-number-current-line                ((,class (:inherit fixed-pitch :foreground ,solo-jazz-purple :weight bold :background ,solo-jazz-white))))
 
    ;; lispy
